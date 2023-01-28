@@ -1,0 +1,105 @@
+.backdrop-trailer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.backdrop-trailer.is-hidden .trailer__modal {
+  transform: translate(-50%, 0%) scale(0.5);
+}
+
+body.trailer-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.trailer__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: transparent;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform $time $cubic;
+
+  @include mq(tab) {
+    width: 600px;
+    height: 395px;
+    padding: 40px 20px;
+  }
+
+  @include mq(desk) {
+    width: 800px;
+  }
+}
+
+.trailer__video {
+  width: 100%;
+  height: 150px;
+
+  @include mq(tab) {
+    width: 560px;
+    height: 315px;
+  }
+}
+
+.trailer__btn {
+  position: absolute;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color $time $cubic;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $red-error;
+  }
+
+  &:focus {
+    background-color: $red-error;
+    outline: none;
+  }
+
+  @include mq(tab-only) {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.trailer__btn-icon {
+  width: 35px;
+  height: 35px;
+  stroke: $white-main;
+
+  @include mq(tab-only) {
+    width: 20px;
+    height: 20px;
+  }
+}

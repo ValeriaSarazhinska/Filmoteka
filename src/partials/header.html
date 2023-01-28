@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo-link"
+          ><svg class="header__logo-icon">
+            <use href="./img/sprite.svg#film"></use>
+          </svg>
+        </a>
+        <a href="./index.html" class="header__logo--word">Filmoteka</a>
+      </div>
+      <ul class="header__nav--list">
+        <li class="header__underline header__nav-item">
+          <a href="./index.html" class="header__pages--reset">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="./library.html" class="header__pages--reset">My library</a>
+        </li>
+      </ul>
+    </nav>
+    <form class="header__form">
+      <input
+        type="text"
+        name="searchQuery"
+        class="header__input"
+        placeholder="Movie search"
+        autocomplete="off"
+      />
+      <button type="submit" class="search__button">
+        <svg class="search__icon">
+          <use href="./img/sprite.svg#search"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</header>

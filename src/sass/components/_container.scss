@@ -1,0 +1,13 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include mq('tab') {
+    width: 734px;
+  }
+
+  @include mq('desk') {
+    width: 1246px;
+  }
+}
